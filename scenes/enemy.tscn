@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://b1mdtx3co3ywj"]
+
+[ext_resource type="Script" uid="uid://cfpvh0glgh63t" path="res://scripts/enemy.gd" id="1_7p1mj"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8tegq"]
+radius = 7.0
+
+[node name="Enemy" type="CharacterBody2D" groups=["enemies"]]
+script = ExtResource("1_7p1mj")
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+position = Vector2(0, 1.32291)
+scale = Vector2(1, 1.30208)
+color = Color(0.627451, 0.219608, 0.290196, 1)
+polygon = PackedVector2Array(-8, -11, -7, -1, -8, 8.2, 14, -1.016)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_8tegq")
