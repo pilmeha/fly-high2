@@ -4,8 +4,6 @@ var direction: Vector2
 const SPEED = 10
 var explosion_scene = preload("res://scenes/explosion.tscn")
 
-
-
 func _physics_process(delta: float) -> void:
 	global_position += direction * SPEED
 
@@ -25,3 +23,4 @@ func _on_body_entered(body: Node2D) -> void:
 		explosion.lifetime = randf_range(0.5, 0.7)
 
 		$/root/Game.add_child(explosion)
+			

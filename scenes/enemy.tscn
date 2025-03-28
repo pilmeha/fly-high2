@@ -1,18 +1,24 @@
-[gd_scene load_steps=3 format=3 uid="uid://b1mdtx3co3ywj"]
+[gd_scene load_steps=4 format=3 uid="uid://b1mdtx3co3ywj"]
 
 [ext_resource type="Script" uid="uid://cfpvh0glgh63t" path="res://scripts/enemy.gd" id="1_7p1mj"]
+[ext_resource type="Texture2D" uid="uid://cxsq08km3mi6q" path="res://assets/tiny_ship13.png" id="2_md0e3"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_8tegq"]
-radius = 7.0
+[sub_resource type="CircleShape2D" id="CircleShape2D_4ra3w"]
+radius = 15.0
 
 [node name="Enemy" type="CharacterBody2D" groups=["enemies"]]
 script = ExtResource("1_7p1mj")
 
+[node name="TinyShip13" type="Sprite2D" parent="."]
+rotation = 1.5708
+texture = ExtResource("2_md0e3")
+
 [node name="Polygon2D" type="Polygon2D" parent="."]
+visible = false
 position = Vector2(0, 1.32291)
 scale = Vector2(1, 1.30208)
 color = Color(0.627451, 0.219608, 0.290196, 1)
 polygon = PackedVector2Array(-8, -11, -7, -1, -8, 8.2, 14, -1.016)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_8tegq")
+shape = SubResource("CircleShape2D_4ra3w")
